@@ -13,7 +13,7 @@ public final class LWJEBPlugin extends JavaPlugin {
 
     @Override
     public void onEnable() {
-        getLogger().log(Level.INFO,"LWJEB Plugin enabled!");
+        getLogger().log(Level.INFO, "LWJEB Plugin enabled!");
     }
 
     @Override
