@@ -1,0 +1,41 @@
+plugins {
+    id 'com.github.johnrengelman.shadow' version '5.2.0'
+    id 'java'
+}
+
+group 'com.github.Hippah'
+version '1.0-SNAPSHOT'
+
+shadowJar {
+
+    dependencies {
+        exclude(dependency {
+            !it.moduleGroup.startsWith('me.hippo') && !it.moduleGroup.startsWith('org.ow2') && !it.moduleGroup.startsWith('redis')
+        })
+    }
+
+    baseName = 'LWJEB'
+    classifier = ''
+    archiveVersion = ''
+    relocate 'org.objectweb', 'me.hippo.api.lwjeb.asm.org.objectweb'
+    relocate 'redis', 'me.hippo.api.lwjeb.extensions.rle.redis.redis'
+}
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+    maven {
+        url "https://hub.spigotmc.org/nexus/content/repositories/snapshots/"
+    }
+    maven {
+        url "https://oss.sonatype.org/content/repositories/snapshots/"
+    }
+}
+
+dependencies {
+    implementation 'org.spigotmc:spigot-api:1.8.8-R0.1-SNAPSHOT'
+    compile 'org.ow2.asm:asm:7.1'
+    compile 'org.ow2.asm:asm-tree:7.1'
+    compile 'redis.clients:jedis:3.2.0'
+}
