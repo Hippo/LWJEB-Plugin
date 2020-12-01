@@ -1,0 +1,4 @@
+name: LWJEB
+main: rip.hippo.lwjeb.plugin.Plugin
+version: 2.0.0
+author: Hippo
