@@ -36,12 +36,12 @@ shadowJar {
 
     dependencies {
         exclude(dependency {
-            !it.moduleGroup.startsWith('com.github.Hippo') && !it.moduleGroup.startsWith('org.ow2') && !it.moduleGroup.startsWith('redis') && !it.moduleGroup.startsWith('org.apache') && !it.moduleGroup.startsWith('org.slf4j')
+            !it.moduleGroup.startsWith('com.github.Hippo') && !it.moduleGroup.startsWith('org.ow2') && !it.moduleGroup.startsWith('redis')
         })
     }
 
 
-    relocate 'org', 'rip.hippo.lwjeb.plugin.org'
+    relocate 'org.objectweb', 'rip.hippo.lwjeb.plugin.org.objectweb'
     relocate 'com.google.gson', 'rip.hippo.lwjeb.plugin.com.google.gson'
     relocate 'redis.clients.jedis', 'rip.hippo.lwjeb.plugin.redis.clients.jedis'
 
