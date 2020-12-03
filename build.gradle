@@ -44,7 +44,6 @@ shadowJar {
     relocate 'org', 'rip.hippo.lwjeb.plugin.org'
     relocate 'com.google.gson', 'rip.hippo.lwjeb.plugin.com.google.gson'
     relocate 'redis.clients.jedis', 'rip.hippo.lwjeb.plugin.redis.clients.jedis'
-    relocate 'rip.hippo', 'rip.hippo.lwjeb.plugin.rip.hippo'
 
 }
 
